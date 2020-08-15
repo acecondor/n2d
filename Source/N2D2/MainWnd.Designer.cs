@@ -52,6 +52,10 @@
             this.progC2 = new Bunifu.Framework.UI.BunifuColorTransition(this.components);
             this.errorFader = new System.Windows.Forms.Timer(this.components);
             this.okFader = new System.Windows.Forms.Timer(this.components);
+            this.startBtn = new System.Windows.Forms.Button();
+            this.flashSizeCbo = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.releaselbl = new System.Windows.Forms.Label();
             this.stageBack.SuspendLayout();
             this.debugBorder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
@@ -101,9 +105,9 @@
             this.titleLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLbl.Location = new System.Drawing.Point(22, 30);
             this.titleLbl.Name = "titleLbl";
-            this.titleLbl.Size = new System.Drawing.Size(209, 30);
+            this.titleLbl.Size = new System.Drawing.Size(491, 45);
             this.titleLbl.TabIndex = 2;
-            this.titleLbl.Text = "Connect your device";
+            this.titleLbl.Text = "Select flash size and press \'Start\'";
             // 
             // captionLbl
             // 
@@ -111,9 +115,9 @@
             this.captionLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.captionLbl.Location = new System.Drawing.Point(23, 60);
             this.captionLbl.Name = "captionLbl";
-            this.captionLbl.Size = new System.Drawing.Size(158, 21);
+            this.captionLbl.Size = new System.Drawing.Size(149, 32);
             this.captionLbl.TabIndex = 3;
-            this.captionLbl.Text = "Searching for devices";
+            this.captionLbl.Text = "Default 1MB";
             // 
             // titleApp
             // 
@@ -121,7 +125,7 @@
             this.titleApp.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleApp.Location = new System.Drawing.Point(70, 294);
             this.titleApp.Name = "titleApp";
-            this.titleApp.Size = new System.Drawing.Size(150, 21);
+            this.titleApp.Size = new System.Drawing.Size(224, 32);
             this.titleApp.TabIndex = 5;
             this.titleApp.Text = "Node2Deauther V2";
             // 
@@ -131,9 +135,9 @@
             this.captionApp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.captionApp.Location = new System.Drawing.Point(70, 315);
             this.captionApp.Name = "captionApp";
-            this.captionApp.Size = new System.Drawing.Size(88, 15);
+            this.captionApp.Size = new System.Drawing.Size(279, 25);
             this.captionApp.TabIndex = 6;
-            this.captionApp.Text = "by mrvodka007";
+            this.captionApp.Text = "by mrvodka007 (acecondor mod)";
             // 
             // debug
             // 
@@ -164,7 +168,7 @@
             this.debugTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.debugTitle.Location = new System.Drawing.Point(9, 125);
             this.debugTitle.Name = "debugTitle";
-            this.debugTitle.Size = new System.Drawing.Size(77, 17);
+            this.debugTitle.Size = new System.Drawing.Size(120, 28);
             this.debugTitle.TabIndex = 9;
             this.debugTitle.Text = "Activity Log:";
             // 
@@ -196,7 +200,6 @@
             // 
             // logoBox
             // 
-            this.logoBox.Image = global::N2D2.Properties.Resources.N2D_ICON;
             this.logoBox.Location = new System.Drawing.Point(12, 282);
             this.logoBox.Name = "logoBox";
             this.logoBox.Size = new System.Drawing.Size(52, 79);
@@ -206,7 +209,7 @@
             // 
             // circleProg
             // 
-            this.circleProg.animated = true;
+            this.circleProg.animated = false;
             this.circleProg.animationIterval = 10;
             this.circleProg.animationSpeed = 1;
             this.circleProg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
@@ -238,7 +241,6 @@
             this.exitBtn.TabIndex = 12;
             this.exitBtn.Text = "Exit";
             this.exitBtn.UseVisualStyleBackColor = false;
-            this.exitBtn.Visible = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // progC1
@@ -263,12 +265,68 @@
             this.okFader.Interval = 50;
             this.okFader.Tick += new System.EventHandler(this.okFader_Tick);
             // 
+            // startBtn
+            // 
+            this.startBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.startBtn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.startBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.startBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startBtn.Location = new System.Drawing.Point(445, 319);
+            this.startBtn.Name = "startBtn";
+            this.startBtn.Size = new System.Drawing.Size(208, 31);
+            this.startBtn.TabIndex = 13;
+            this.startBtn.Text = "Start";
+            this.startBtn.UseVisualStyleBackColor = false;
+            this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
+            // 
+            // flashSizeCbo
+            // 
+            this.flashSizeCbo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.flashSizeCbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flashSizeCbo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flashSizeCbo.ForeColor = System.Drawing.Color.White;
+            this.flashSizeCbo.FormattingEnabled = true;
+            this.flashSizeCbo.Items.AddRange(new object[] {
+            "512kb",
+            "1mb",
+            "4mb"});
+            this.flashSizeCbo.Location = new System.Drawing.Point(357, 319);
+            this.flashSizeCbo.Name = "flashSizeCbo";
+            this.flashSizeCbo.Size = new System.Drawing.Size(82, 33);
+            this.flashSizeCbo.TabIndex = 14;
+            this.flashSizeCbo.SelectedIndexChanged += new System.EventHandler(this.flashSizeCbo_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(352, 285);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 25);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Flash size";
+            // 
+            // releaselbl
+            // 
+            this.releaselbl.AutoSize = true;
+            this.releaselbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.releaselbl.Location = new System.Drawing.Point(593, 120);
+            this.releaselbl.Name = "releaselbl";
+            this.releaselbl.Size = new System.Drawing.Size(50, 25);
+            this.releaselbl.TabIndex = 16;
+            this.releaselbl.Text = "0.0.0";
+            this.releaselbl.Click += new System.EventHandler(this.releaselbl_Click);
+            // 
             // MainWnd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(666, 388);
+            this.Controls.Add(this.releaselbl);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.flashSizeCbo);
+            this.Controls.Add(this.startBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.helpBtn);
             this.Controls.Add(this.debugTitle);
@@ -322,6 +380,10 @@
         private Bunifu.Framework.UI.BunifuColorTransition progC2;
         private System.Windows.Forms.Timer errorFader;
         private System.Windows.Forms.Timer okFader;
+        private System.Windows.Forms.Button startBtn;
+        private System.Windows.Forms.ComboBox flashSizeCbo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label releaselbl;
     }
 }
 

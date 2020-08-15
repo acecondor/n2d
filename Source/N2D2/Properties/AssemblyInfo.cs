@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Node2Deauther 2")]
 [assembly: AssemblyDescription("Convert any ESP8266 to a deauther!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("mrvodka007, TheDarkLions")]
+[assembly: AssemblyCompany("mrvodka007, TheDarkLions, mod AceCondor")]
 [assembly: AssemblyProduct("Node2Deauther")]
 [assembly: AssemblyCopyright("Copyright © mrvodka007 2020")]
 [assembly: AssemblyTrademark("N2D, ND2D, Node2Deauther, Node2Deauther2, n2d")]

@@ -15,6 +15,7 @@ using System.Windows.Forms;
 
 namespace N2D2
 {
+    
     public partial class MainWnd : Form
     {
 
@@ -27,6 +28,9 @@ namespace N2D2
         public List<string> SerialNames = new List<string>();
 
         public string binaryImage = string.Empty;
+
+        public string releaseVers = "2.1.0";
+        public string flashSize = "1mb";
 
       
         public MainWnd()
@@ -208,11 +212,17 @@ namespace N2D2
 
         private void MainWnd_Load(object sender, EventArgs e)
         {
-            nodeService.Start();
-            LogActivity("Started Services", LogType.Info);
-            LogActivity("This app uses the first espressif serial device, remove any other RS232 devices or try https://github.com/mrvodka007/n2dx", LogType.Warning);
+            // spostato avvio tramite pressione pulsante
+            //M nodeService.Start();
+            //M LogActivity("Started Services", LogType.Info);
+            //M LogActivity("This app uses the first espressif serial device, remove any other RS232 devices or try https://github.com/mrvodka007/n2dx", LogType.Warning);
+
+            //https://api.github.com/repos/SpacehuhnTech/esp8266_deauther/releases/latest
 
             
+            releaselbl.Text = releaseVers;
+
+            flashSizeCbo.SelectedItem = flashSize;
         }
 
         private async void ManagementThread()
@@ -281,7 +291,7 @@ namespace N2D2
             UpdateLabel(titleLbl, "Preparing");
             UpdateLabel(captionLbl, "Downloading firmware");
 
-            string DownloadURL = "http://github.com/spacehuhn/esp8266_deauther/releases/download/v2.1.0/deauther_2.1.0_1mb.bin";
+            string DownloadURL = "http://github.com/spacehuhn/esp8266_deauther/releases/download/v" + releaseVers + "/deauther_" + releaseVers +"_" + flashSize + ".bin"; //M
             string DownloadPKG = DownloadURL.Split('/')[8];
 
             LogActivity("N2D needs access to the internet. Please allow it if prompted.", LogType.Warning);
@@ -417,6 +427,38 @@ namespace N2D2
 
             if (progC1.ProgessValue == 100 && progC2.ProgessValue == 100)
                 errorFader.Stop();
+        }
+
+        private void startBtn_Click(object sender, EventArgs e)
+        {
+            //M 
+            circleProg.animated = true;
+            titleLbl.Text = "Connect your device";
+            captionLbl.Text = "Searching for devices";
+            exitBtn.Visible = false;
+
+
+            nodeService.Start();
+            LogActivity("Started Services", LogType.Info);
+            LogActivity("This app uses the first espressif serial device, remove any other RS232 devices or try https://github.com/mrvodka007/n2dx", LogType.Warning);
+
+        }
+
+        private void releaselbl_Click(object sender, EventArgs e)
+        {
+            string result = Microsoft.VisualBasic.Interaction.InputBox("Input custom version (format X.Y.Z)", "Select release", releaseVers);
+            if ((result.Length >= 5))
+            {
+                releaselbl.Text = result;
+                releaseVers = result;
+            }
+                
+
+        }
+
+        private void flashSizeCbo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            flashSize = flashSizeCbo.SelectedItem.ToString();            
         }
     }
 }

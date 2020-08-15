@@ -10,3 +10,15 @@ C:\Users\Alex\Documents\GitHub\n2d\Source\N2D2\obj\Release\N2D2.csproj.CoreCompi
 C:\Users\Alex\Documents\GitHub\n2d\Source\N2D2\obj\Release\N2D2.csproj.CopyComplete
 C:\Users\Alex\Documents\GitHub\n2d\Source\N2D2\obj\Release\N2D2.exe
 C:\Users\Alex\Documents\GitHub\n2d\Source\N2D2\obj\Release\N2D2.pdb
+\\morla\cloud-sync\Dropbox\mauriziocondini\Dropbox\GitHub\n2d\Source\N2D2\obj\Release\N2D2.csprojAssemblyReference.cache
+\\morla\cloud-sync\Dropbox\mauriziocondini\Dropbox\GitHub\n2d\Source\N2D2\obj\Release\N2D2.MainWnd.resources
+\\morla\cloud-sync\Dropbox\mauriziocondini\Dropbox\GitHub\n2d\Source\N2D2\obj\Release\N2D2.csproj.GenerateResource.cache
+\\morla\cloud-sync\Dropbox\mauriziocondini\Dropbox\GitHub\n2d\Source\N2D2\bin\Release\N2D2.exe.config
+\\morla\cloud-sync\Dropbox\mauriziocondini\Dropbox\GitHub\n2d\Source\N2D2\bin\Release\N2D2.exe
+\\morla\cloud-sync\Dropbox\mauriziocondini\Dropbox\GitHub\n2d\Source\N2D2\bin\Release\N2D2.pdb
+\\morla\cloud-sync\Dropbox\mauriziocondini\Dropbox\GitHub\n2d\Source\N2D2\bin\Release\Bunifu_UI_v1.5.3.dll
+\\morla\cloud-sync\Dropbox\mauriziocondini\Dropbox\GitHub\n2d\Source\N2D2\obj\Release\N2D2.Properties.Resources.resources
+\\morla\cloud-sync\Dropbox\mauriziocondini\Dropbox\GitHub\n2d\Source\N2D2\obj\Release\N2D2.csproj.CoreCompileInputs.cache
+\\morla\cloud-sync\Dropbox\mauriziocondini\Dropbox\GitHub\n2d\Source\N2D2\obj\Release\N2D2.csproj.CopyComplete
+\\morla\cloud-sync\Dropbox\mauriziocondini\Dropbox\GitHub\n2d\Source\N2D2\obj\Release\N2D2.exe
+\\morla\cloud-sync\Dropbox\mauriziocondini\Dropbox\GitHub\n2d\Source\N2D2\obj\Release\N2D2.pdb
