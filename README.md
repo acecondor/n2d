@@ -6,7 +6,7 @@
 
 
 <h1 align="center">Node2Deauther V2!</h1>
-<h3> It's simple. It's easy. It's N2D V2! And it's here! </h3> <a href="https://github.com/mrvodka007/n2d/raw/master/ReleaseEXE/N2D2.exe"> Download Now </a>
+<h3> It's simple. It's easy. It's N2D V2! And it's here! </h3> <a href="https://github.com/acecondor/n2d/releases/download/2.1.0/N2D2.exe"> Download Now </a>
 
 ---
 
